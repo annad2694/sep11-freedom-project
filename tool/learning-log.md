@@ -50,8 +50,20 @@ wait(1, () => destroy(message));
 
 <p>I haven’t gotten that far yet, but this is what I have tinkered with and learned in the past few days, and I look forward to learning more.</p>
 
-### X/X/XX:
-* Text
+### 10/12/25:
+
+### Tinkering and Tying Things Together
+
+<p>This week, I spent most of my time just tinkering around with Kaboom and trying to really understand how each part of my code connects. I feel like I’ve built the main idea of the Simon Says Memory Game, but I wanted to go deeper into how everything actually works behind the scenes — not just copying and pasting. I started looking more closely at the JavaScript logic, especially how arrays, loops, and functions interact in my game. </p>
+<p>For example, I have the <b>pattern</b> array that stores which colors the player needs to remember, and I realized that every time the player gets it right, the array grows. That made me think about how JavaScript updates data while the game is running, which is something I hadn’t really paid attention to before. I also experimented with timing. In Kaboom, you use <code>wait()</code> to delay actions, but I wanted to understand how that worked compared to using JavaScript’s <code>setTimeout()</code>. So, I tested both out to see how the game would behave. I learned that <code>wait()</code> is built into Kaboom’s system, which made it easier to sync with the visuals, while <code>setTimeout()</code> felt a bit off since it’s not part of the game loop. That helped me understand why game engines sometimes have their own built-in versions of things that already exist in JavaScript.</p>
+
+```js
+wait(1, () => showMessage("Simon says click!"));
+setTimeout(() => showMessage("appear later"), 1000);
+```
+
+When I tried this out, I noticed <code>wait()</code> lined up perfectly with the flashing buttons, but <code>setTimeout()</code> sometimes ran at weird moments. Seeing that happen helped me figure out why Kaboom handles timing differently from normal JavaScript — it’s designed to match the frame updates of the game. </p>
+<p>Another thing I figured out was how to make my message pop up and disappear at the right time. Before, I was just destroying the text right away, but now I learned how to control it better by using <code>if</code> statements and resetting variables. It’s honestly small stuff, but each time I mess with one piece, I understand the overall structure a little more. I think this is the fun part — when you start connecting random bits of JavaScript knowledge you’ve had for a while to something visual and interactive. I’m still far from the final version, but now it feels like I’m shaping the logic of the game, not just designing it.</p>
 
 
 <!-- 
