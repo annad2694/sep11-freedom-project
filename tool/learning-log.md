@@ -65,7 +65,7 @@ setTimeout(() => showMessage("appear later"), 1000);
 When I tried this out, I noticed <code>wait()</code> lined up perfectly with the flashing buttons, but <code>setTimeout()</code> sometimes ran at weird moments. Seeing that happen helped me figure out why Kaboom handles timing differently from normal JavaScript — it’s designed to match the frame updates of the game. </p>
 <p>Another thing I figured out was how to make my message pop up and disappear at the right time. Before, I was just destroying the text right away, but now I learned how to control it better by using <code>if</code> statements and resetting variables. It’s honestly small stuff, but each time I mess with one piece, I understand the overall structure a little more. I think this is the fun part — when you start connecting random bits of JavaScript knowledge you’ve had for a while to something visual and interactive. I’m still far from the final version, but now it feels like I’m shaping the logic of the game, not just designing it.</p>
 
-### 10/12/25:
+### 10/19/25:
 
 ### Applying some classroom knowledge...
 
