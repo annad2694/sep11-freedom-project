@@ -1,5 +1,5 @@
 # Entry 1
-##### X/X/XX
+##### 11/27/25
 
 Content:
 Which tool you’ve decided on, why, and how you tinkered with it (code)
