@@ -12,6 +12,10 @@ However, I like my second attempt more, where I used Kaboom code, and it definit
 
 The problem, which is the reason I couldn’t make it work before, is that it only repeats for about one cycle. I want my game to go on forever and keep repeating, so I started researching and found that I have to use something called `async`. I use `async/await` when I want to pause a function and run multiple lines of code in order. When I use the callback style, it is perfect for <b>single delayed actions</b>; however, if I need <b>multiple actions</b> in order, like a Simon Says game, I need to learn how to use the `async/await` style. Therefore, my plan for winter break is to learn that new style and incorporate it into my Freedom Project. Then, I will learn how to position the objects and add them into the index.html I am using to experiment with my Freedom Project, and I will test to see if it all works.
 
+
+### EDP
+I believe that, as of late, I am most definitely in the <b>defining the problem</b> and <b>researching the problem</b> stage of the engineering design process. I feel like I have definitely run into a problem, and I have researched what the problem I encountered was. Over the break, I plan to <b>brainstorm possible solutions</b> to manage and fix the problem so I can get my code running more efficiently by the time I get back from break for the next Freedom Monday.
+
 [Previous](entry01.md) | [Next](entry03.md)
 
 [Home](../README.md)
