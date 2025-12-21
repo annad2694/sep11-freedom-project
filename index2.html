@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/kaboom/dist/kaboom.js"></script>
+</head>
+<body>
+    <script>
+        kaboom({ width: 1000, height: 1000 }); // kaboom background
+
+        const message = add([ // adds a text object
+            text("wait one second..."),
+            pos(20, 20) //position on screen
+        ]);
+
+        function waitSecond(sec, callback) { //function that will run after wait is over
+            setTimeout(callback, sec * 1000); // waits for "sec*100) then will run the callback
+        }
+
+        /*waits one second and then changes the text*/
+        waitSecond(1, () => {
+            message.text = "okay! one second is over";
+        });
+
+
+
+
+    </script>
+</body>
+</html>
+
+ <script>
+
+        kaboom({ width: 1000, height: 1000 }); //background canvas
+
+        const message = add([ // adds a text object
+            text("Wait for it..."),
+            pos(20, 20) // position on screen
+        ]);
+
+
+        wait(1, () => {  // waits one second, then runs whats inside the curly brackets
+            message.text = "Hello after 1 second!";
+        });
+
+    </script>
