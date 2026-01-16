@@ -85,4 +85,31 @@ function nextSequence() {
 <p>Obviously I can adjust the colors or the amount of them but this is a simple demo even using Math.floor to make sure I get a whole number not a decimal. Because Math.random can be any number so when I apply Math.floor to it, it will make it a even interger that cannot be negative. So whenw e push we add a new certain step to the Simon pattern sequence so it can keep going, and then probably I can use Kaboom to recgonize when the user gets it wrong, and restart the game. </p>
 
 ### 1/16/25:
+#### Button Creation & Placement
+
+I wanted to work more on the format. My idea was I wanted a button on the four corners of my screen.. I used Kaboom's `pos()` function to place it where I want. To make it a <b>red button</b>, I used `rgb(255, 0, 0)` for the color:
+
+```js
+const redButton = add([
+    rect(100, 50),        // Size 
+    pos(150, 200),        // Position 
+]);
+
+redButton.color = rgb(255, 0, 0);  // red
+```
+I placed it at `pos(150, 200)` because I wanted it roughly centered, but I made adjustments to get the right look on my screen.
+
+#### Text Placement
+
+I also added text at the top of the screen with a simple message. The text is placed using pos() for positioning:
+
+```js
+let message = add([
+    text("Simon says click!"),  // The message
+    pos(200, 50)                // Position it near the top center
+]);
+
+wait(1, () => destroy(message));  // Destroy the message after 1 second
+```
+I placed the message at `pos(200, 50)` because I wanted it near the top but still visible. It disappears after <b>1</b> second using wait().
 
