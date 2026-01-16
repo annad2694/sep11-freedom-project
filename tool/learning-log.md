@@ -83,13 +83,6 @@ function nextSequence() {
 }
 ```
 <p>Obviously I can adjust the colors or the amount of them but this is a simple demo even using Math.floor to make sure I get a whole number not a decimal. Because Math.random can be any number so when I apply Math.floor to it, it will make it a even interger that cannot be negative. So whenw e push we add a new certain step to the Simon pattern sequence so it can keep going, and then probably I can use Kaboom to recgonize when the user gets it wrong, and restart the game. </p>
-<!-- 
-* Links you used today (websites, videos, etc)
-* Things you tried, progress you made, etc
-* Challenges, a-ha moments, etc
-* Questions you still have
-* What you're going to try next
--->
 
-### 12/TBD/25:
+### 1/16/25:
 
