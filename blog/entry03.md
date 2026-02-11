@@ -18,7 +18,7 @@ redButton.onClick(() => { // when the user clicks action will preform
 });
 ```
 
-I tried out a sequence of button flashes with `async/await`, that I learned from the Web Dev Simplified’s Simon Game tutorial.
+I tried out a sequence of button flashes with `async/await`, that I learned from the <a href="[https://kaboomjs.com/Q](https://www.youtube.com/watch?v=n_ec3eowFLQ"> Web Dev Simplified’s Simon Game </a> tutorial.
 
 In the video it is said that use of an `async` function is a big part in game development as it allows the program to pause between actions. Also he goes over the `playPattern()` function and a simple `for` loop which in turn display the buttons one at a time in the right order. He also brought up a method which uses callbacks for the alternative but he reports that `async/await` does better for larger sequences. I tried out a more basic version:.
 
