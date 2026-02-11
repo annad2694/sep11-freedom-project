@@ -19,7 +19,7 @@ redButton.onClick(() => { // when the user clicks action will preform
 });
 ```
 
-I tried out a sequence of button flashes with `async/await`, that I learned from the <a href="https://www.youtube.com/watch?v=n_ec3eowFLQ">Web Dev Simplified’s Simon Game tutorial</a>
+I then tried out a sequence of button flashes with `async/await`, that I learned from the <a href="https://www.youtube.com/watch?v=n_ec3eowFLQ">Web Dev Simplified’s Simon Game tutorial</a>
 
 In the video it is said that use of an `async` function is a big part in game development as it allows the program to pause between actions. Also he goes over the `playPattern()` function and a simple `for` loop which in turn display the buttons one at a time in the right order. He also brought up a method which uses callbacks for the alternative but he reports that `async/await` does better for larger sequences. I tried out a more basic version:.
 
@@ -45,13 +45,14 @@ add([
     lifespan(1) // makes text dissapear after one sec
 ]);
 ```
-This improved the readability of the code and I added notes that overall clearly explain what each part does which in turn will help me as I develop the MVP soon. My next actions are actually putting this all together and using what we've been learning recently in class. DOM could actually be very helpful as a kind of co manager with Kaboom for they both use similar "on click" attributes, which I think will be helpful in my ultimate final project. My next steps essentially overall would be moreso like trying to use the `choose(array)` to incorporate in my code and something with the `handle` element, I heard it can be handy in a project like mine from a senior friend I know who also used Kaboom on his project.
+This improved the readability of the code and I added notes that overall clearly explain what each part does which in turn will help me as I develop the MVP soon. My next actions are actually putting this all together and using what we've been learning recently in class. <b>DOM</b> could actually be very helpful as a kind of co manager with Kaboom for they both use similar "on click" attributes, which I think will be helpful in my ultimate final project. My next steps essentially overall would be moreso like trying to use the `choose(array)` to incorporate in my code and something with the `handle` element, I heard it can be handy in a project like mine from a senior friend I know who also used Kaboom on his project.
 
 ### EDP
 I believe I am halfway inbetween all the steps for the engineering designing process, I am definetely around the area of <b>"planning the most promising solution"</b> and <b>"creating the prototype"</b>. I am just trying to get what I've learned so far to make a basic model of what I'm trying to create so I can present soon for my MVP project. But most certainly I will be out from inbetweeen and fully abide my attention to <b> creating the prototype</b> so I can start showing other individuals my project I created and get any feedback as needed. That is what I believe my next steps are.
 
 ### Skills
-<p>As of recentely, and most possibly seen as I write this blog I have improved very much on this unique skill labeled <b>"Attention to detail"</b>, usually I have a lot of errors from missing syntax or from spelling and I would put it through AI to just find a quick solution to finding my mistake and letting it fix it for me. However, I have not been doing that recently, and taking extra time to make sure all my spelling is correct and rereading my code to make sure I didnt forget a bracket or a certain element needed to allow my code to work. Through that, collaboratively I learn the skill of <b>"Embracing failure"</b> for we are human and make mistakes but we should not be discouraged when doing so. As I fix my myself, I feel actually more proud of myself I was able to spot it and fix the problem and learn not to make the same silly mistake again. It is a humbling but a well lesson learnt experience, which makes it worth it. </p>
+<p>As of recentely, and most possibly seen as I write this blog I have improved very much on this unique skill labeled <b>"Attention to detail"</b>, usually I have a lot of errors from missing syntax or from spelling and I would put it through AI to just find a quick solution to finding my mistake and letting it fix it for me. However, I have not been doing that recently, and taking extra time to make sure all my spelling is correct and rereading my code to make sure I didnt forget a bracket or a certain element needed to allow my code to work.</p>
+<p>Through that, collaboratively I learn the skill of <b>"Embracing failure"</b> for we are human and make mistakes but we should not be discouraged when doing so. As I fix my myself, I feel actually more proud of myself I was able to spot it and fix the problem and learn not to make the same silly mistake again. It is a humbling but a well lesson learnt experience, which makes it worth it. </p>
 
 [Previous](entry02.md) | [Next](entry04.md)
 
