@@ -4,9 +4,10 @@
 ### Content
 <p>Since the winter break I have been working on putting together the pieces of my Simon Says game. I still haven’t fully coded the game at this point in time, but have been playing around with key elements to see how they fit together. Also I used AI to look at new options  not to copy or cheat but to put forth different ideas and to see what I may be missing.</p>
 
-When I tried this out of the by myself, I saw that the red rectangle was producing the console message which in turn gave me an idea as to how the clickable buttons worked. I had found the idea that `area()` from the Kaboom.js documentation
- under “Area / Collisions,” was a key component in my game as it enables each colored button to react to the player’s clicks. I also found out from AI that I could use `anchor("center")` for better looking positioning and `colorize()` to change the button’s color at will. I put that into practice and my attempt at the code came out much more clean and easier to read, which made it more pleasent to comment.
- ```js
+When I tried this out of the by myself, I saw that the red rectangle was producing the console message which in turn gave me an idea as to how the clickable buttons worked. I had found the idea that `area()` from the Kaboom.js documentation under “Area / Collisions,”(<a href="https://kaboomjs.com/docs/">Source 1</a> & <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises">Source 2</a>) was a key component in my game as it enables each colored button to react to the player’s clicks. I also found out from AI that I could use `anchor("center")` for better looking positioning and `colorize()` to change the button’s color at will. I put that into practice and my attempt at the code came out much more clean and easier to read, which made it more pleasent to comment.
+ ```js 
+
+
  const redButton = add([
     rect(100, 100), //rectangle made
     colorize(255, 0, 0), //button's color
@@ -18,9 +19,7 @@ redButton.onClick(() => { // when the user clicks action will preform
 });
 ```
 
-I tried out a sequence of button flashes with `async/await`, that I learned from the 
-<a href="https://kaboomjs.com/Q"> Kaboom.js </a>
-<a href="[https://kaboomjs.com/Q](https://www.youtube.com/watch?v=n_ec3eowFLQ"> Web Dev Simplified’s Simon Game </a> tutorial.
+I tried out a sequence of button flashes with `async/await`, that I learned from the <a href="https://www.youtube.com/watch?v=n_ec3eowFLQ">Web Dev Simplified’s Simon Game tutorial</a>
 
 In the video it is said that use of an `async` function is a big part in game development as it allows the program to pause between actions. Also he goes over the `playPattern()` function and a simple `for` loop which in turn display the buttons one at a time in the right order. He also brought up a method which uses callbacks for the alternative but he reports that `async/await` does better for larger sequences. I tried out a more basic version:.
 
