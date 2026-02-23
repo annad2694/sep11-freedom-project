@@ -55,3 +55,4 @@ I believe I am halfway inbetween all the steps for the engineering designing pro
 [Previous](entry02.md) | [Next](entry04.md)
 
 [Home](../README.md)
+https://www.youtube.com/watch?v=n_ec3eowFLQ
