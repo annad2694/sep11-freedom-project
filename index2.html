@@ -5,10 +5,12 @@
 </head>
 <body>
     <script>
-        kaboom()
+        kaboom({
+            width: 800,   // w
+            height: 600   // h
+        })
+
         setBackground(50, 50, 50) // dark gray background
-        width: 800,
-        height: 600,
 
         // the rectangles
         add([
@@ -31,7 +33,7 @@
 
          add([
             rect(400, 300),    // w x l
-            pos(0, 300),       // x, y
+            pos(400, 300),       // x, y
             color(255, 225, 0),  // yellow
         ])
     </script>
