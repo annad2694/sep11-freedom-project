@@ -82,8 +82,8 @@ When I tried this out, I noticed <code>wait()</code> lined up perfectly with the
 <p>Obviously I can adjust the colors or the amount of them but this is a simple demo even using Math.floor to make sure I get a whole number not a decimal. Because Math.random can be any number so when I apply Math.floor to it, it will make it a even interger that cannot be negative. So whenw e push we add a new certain step to the Simon pattern sequence so it can keep going, and then probably I can use Kaboom to recgonize when the user gets it wrong, and restart the game. </p>
 
 ### 3/08/26:
-<p> Unfortunately I haven't really been updating myself here in my learning log as of late. However I wanted to note that I am on the building portion of my journey. Mr. Mueller says that now around this time students will go back and forth from still learning more information but also incorporating our knowledge and skills into our MVP already. I actually have started my MVP recently and have a whole layed out plan to continue doing so. Since i've only just started, I have created the background and the pratical layout of the game so far using what I learned from my research of Kaboom. 
-Here is my progress so far: 
+<p> Unfortunately I haven't really been updating myself here in my learning log as of late. However I wanted to note that I am on the building portion of my journey. Mr. Mueller says that now around this time students will go back and forth from still learning more information but also incorporating our knowledge and skills into our MVP already. I actually have started my MVP recently and have a whole layed out plan to continue doing so. Since i've only just started, I have created the background and the pratical layout of the game so far using what I learned from my research of Kaboom.</p>
+<p>Here is my progress so far:</p> 
 
 ```js
      kaboom()
@@ -115,6 +115,6 @@ Here is my progress so far:
             pos(0, 300),       // x, y
             color(255, 225, 0),  // yellow
         ])
-```</p>
-I haven't exactly learned a more prominate way to shorten my repetitive code but this is only the MVP. I'll be sure when I do my next researching portion to research how to condense my already written code. This is what I have so far, and I plan to take my own advice and continue on with the steps I have written in my MVP plan on Github. 
+```
+<p>I haven't exactly learned a more prominate way to shorten my repetitive code but this is only the MVP. I'll be sure when I do my next researching portion to research how to condense my already written code. This is what I have so far, and I plan to take my own advice and continue on with the steps I have written in my MVP plan on Github.</p>
 
