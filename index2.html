@@ -13,29 +13,65 @@
         setBackground(50, 50, 50) // dark gray background
 
         // the rectangles
-        add([
+    const rectangle1 = add([
             rect(400, 300),    // w x l
             pos(0, 0),       // x, y
             color(255, 0, 0),  // red
+            area(),
         ])
 
-         add([
+         const rectangle2 = add([
             rect(400, 300),    // w x l
             pos(400, 0),       // x, y
             color(0, 0, 225),  // blue
+            area(),
         ])
 
-         add([
+         const rectangle3 = add([
             rect(400, 300),    // w x l
             pos(0, 300),       // x, y
             color(0, 225, 0),  // green
+            area(),
         ])
 
-         add([
+         const rectangle4 = add([
             rect(400, 300),    // w x l
             pos(400, 300),       // x, y
             color(255, 225, 0),  // yellow
+            area(),
         ])
+            //1
+            rectangle1.onClick(() => {
+                rectangle1.color = rgb(255, 255, 255);
+                wait(0.2, () => {
+                    rectangle1.color = rgb(255, 0, 0); // Fixed variable name
+                });
+            });
+
+         //2
+            rectangle2.onClick(() => {
+                rectangle2.color = rgb(255, 255, 255);
+                wait(0.2, () => {
+                    rectangle2.color = rgb(0, 0, 225); // Fixed variable name & color
+                });
+            });
+            //3
+            rectangle3.onClick(() => {
+                rectangle3.color = rgb(255, 255, 255);
+                wait(0.2, () => {
+                    rectangle3.color = rgb(0, 225, 0); // Fixed variable name & color
+                });
+            });
+
+            //4
+            rectangle4.onClick(() => {
+            rectangle4.color = rgb(255, 255, 255);
+
+            wait(0.2, () => {
+            rectangle4.color = rgb(225, 225, 0);
+            });
+
+        });
     </script>
 </body>
 </html>
