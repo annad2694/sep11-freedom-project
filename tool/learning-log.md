@@ -120,5 +120,7 @@ When I tried this out, I noticed <code>wait()</code> lined up perfectly with the
 
 
 
+
+## HEYYYY
 for next learning log i just wanna say i had a lot of trouble with the flash and this is past me so if iv've figured out how to fix it please talk abit it bc idk how rn
 
