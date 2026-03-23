@@ -118,3 +118,7 @@ When I tried this out, I noticed <code>wait()</code> lined up perfectly with the
 ```
 <p>I haven't exactly learned a more prominate way to shorten my repetitive code but this is only the MVP. I'll be sure when I do my next researching portion to research how to condense my already written code. This is what I have so far, and I plan to take my own advice and continue on with the steps I have written in my MVP plan on Github.</p>
 
+
+
+for next learning log i just wanna say i had a lot of trouble with the flash and this is past me so if iv've figured out how to fix it please talk abit it bc idk how rn
+
