@@ -72,6 +72,108 @@
             });
 
         });
+// not sure check back in with this code --> see if it works
+        function showFeedback1(isCorrect) {
+         feedbackText.text = isCorrect = "Correct"
+          feedbackText.color = isCorrect rgb(0, 255, 0)
+                 wait(0.5, () => {
+        feedbackText.text = "";
+           });
+    }
+        function showFeedback2(isWrong) {
+         feedbackText.text = isWrong = "Wrong"
+          feedbackText.color = isWrong rgb(255, 0, 0)
+                 wait(0.5, () => {
+        feedbackText.text = "";
+           });
+    }
+
+        if buttonIsClicked {
+            // Show feedback
+            showFeedback1(true); // or false based on correctness
+        else
+            showFeedback2(true); // or false based on correctness
+        }
+
+        onClick(() => {
+    block(mousePos())
+});
+
+//new method
+
+        let buttonOne = false;
+
+        // Event handler for the bean object
+        rectangle1.onClick(() => {
+            buttonOne = true;
+            console.log("yes.");
+            // Add logic here to change color, show text, etc.
+        });
+
+        let buttonTwo = false;
+
+        // Event handler for the bean object
+        rectangle2.onClick(() => {
+            buttonTwo = true;
+            console.log("no.");
+            // Add logic here to change color, show text, etc.
+        });
+
+        let buttonThree = false;
+
+        // Event handler for the bean object
+        rectangle3.onClick(() => {
+            buttonThree = true;
+            console.log("maybe.");
+            // Add logic here to change color, show text, etc.
+        });
+
+        let buttonFour = false;
+
+        // Event handler for the bean object
+        rectangle4.onClick(() => {
+            buttonFour = true;
+            console.log("don't know.");
+            // Add logic here to change color, show text, etc.
+        });
+
+        function checkAnswer() {
+    if (buttonOne === true) {
+        console.log("Correct! The bean was right.");
+        // Add code for the correct action (e.g., increase score, move to next level)
+    } else {
+        console.log("Wrong! The button was not right.");
+        // Add code for the wrong action (e.g., decrease lives, display error)
+    }
+}
+function checkAnswer() {
+    if (buttonTwo === true) {
+        console.log("Correct! The bean was right.");
+        // Add code for the correct action (e.g., increase score, move to next level)
+    } else {
+        console.log("Wrong! The button was not right.");
+        // Add code for the wrong action (e.g., decrease lives, display error)
+    }
+}
+ function checkAnswer() {
+    if (buttonThree === true) {
+        console.log("Correct! The bean was right.");
+        // Add code for the correct action (e.g., increase score, move to next level)
+    } else {
+        console.log("Wrong! The button was not right.");
+        // Add code for the wrong action (e.g., decrease lives, display error)
+    }
+}
+ function checkAnswer() {
+    if (buttonFour === true) {
+        console.log("Correct! The bean was right.");
+        // Add code for the correct action (e.g., increase score, move to next level)
+    } else {
+        console.log("Wrong! The button was not right.");
+        // Add code for the wrong action (e.g., decrease lives, display error)
+    }
+}
+
     </script>
 </body>
 </html>
