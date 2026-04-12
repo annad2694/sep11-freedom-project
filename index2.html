@@ -13,167 +13,115 @@
         setBackground(50, 50, 50) // dark gray background
 
         // the rectangles
-    const rectangle1 = add([
+         var rectangle1 = add([
             rect(400, 300),    // w x l
-            pos(0, 0),       // x, y
             color(255, 0, 0),  // red
-            area(),
+            area(), // toucable hitbox
+            pos(0, 0),       // x, y
         ])
 
-         const rectangle2 = add([
+         var rectangle2 = add([
             rect(400, 300),    // w x l
-            pos(400, 0),       // x, y
             color(0, 0, 225),  // blue
             area(),
+            pos(400, 0),       // x, y
         ])
 
-         const rectangle3 = add([
+         var rectangle3 = add([
             rect(400, 300),    // w x l
-            pos(0, 300),       // x, y
             color(0, 225, 0),  // green
             area(),
+            pos(0, 300),       // x, y
         ])
 
-         const rectangle4 = add([
+         var rectangle4 = add([
             rect(400, 300),    // w x l
-            pos(400, 300),       // x, y
             color(255, 225, 0),  // yellow
             area(),
+            pos(400, 300),      // x, y
+
         ])
-            //1
-            rectangle1.onClick(() => {
-                rectangle1.color = rgb(255, 255, 255);
-                wait(0.2, () => {
-                    rectangle1.color = rgb(255, 0, 0); // Fixed variable name
-                });
-            });
 
-         //2
-            rectangle2.onClick(() => {
-                rectangle2.color = rgb(255, 255, 255);
-                wait(0.2, () => {
-                    rectangle2.color = rgb(0, 0, 225); // Fixed variable name & color
-                });
-            });
-            //3
-            rectangle3.onClick(() => {
-                rectangle3.color = rgb(255, 255, 255);
-                wait(0.2, () => {
-                    rectangle3.color = rgb(0, 225, 0); // Fixed variable name & color
-                });
-            });
-
-            //4
-            rectangle4.onClick(() => {
-            rectangle4.color = rgb(255, 255, 255);
-
-            wait(0.2, () => {
-            rectangle4.color = rgb(225, 225, 0);
-            });
-
-        });
-// not sure check back in with this code --> see if it works
-        function showFeedback1(isCorrect) {
-         feedbackText.text = isCorrect = "Correct"
-          feedbackText.color = isCorrect rgb(0, 255, 0)
-                 wait(0.5, () => {
-        feedbackText.text = "";
-           });
-    }
-        function showFeedback2(isWrong) {
-         feedbackText.text = isWrong = "Wrong"
-          feedbackText.color = isWrong rgb(255, 0, 0)
-                 wait(0.5, () => {
-        feedbackText.text = "";
-           });
-    }
-
-        if buttonIsClicked {
-            // Show feedback
-            showFeedback1(true); // or false based on correctness
-        else
-            showFeedback2(true); // or false based on correctness
+        // the sequences
+        var simonsSequence = [] //an array for the sequence that simon says
+        var usersSequence = [] // an array for the sequence the user clicks
+        function followingSequence() {
+            usersSequence = []
+            var randomNum = Math.floor(Math.random() * 4) // assigns the intergerts to the colored box
+            simonsSequence.push(randomNum) // pushes to the end like an array
+            showSequence()
         }
 
-        onClick(() => {
-    block(mousePos())
-});
+        // the flash (for the sequence of the rect)
+        function flash(rect, r, g, b) { // the value of which rectangle to flash
+            rect.color = rgb(255, 255, 255)
+            wait(0.2, () => { // waits 0.2 seconds, then change back to original color
+                rect.color = rgb(r, g, b)
+            })
+        }
 
-//new method
+        // the visual simon says/memory game pattern
+            let i = 0 // becomes global
+        function nextFlash() {
+            if (i >= simonsSequence.length)
+       var num = simonsSequence[i]
+            if (num == 0) flash(rectangle1, 255, 0, 0)
+            else if (num == 1) flash(rectangle2, 0, 0, 225)
+            else if (num == 2) flash(rectangle3, 0, 225, 0)
+            else if (num == 3) flash(rectangle4, 255, 225, 0)
+            i++
+            wait(0.6, nextFlash)
+        }
 
-        let buttonOne = false;
+        function showSequence() {
+            i = 0
+            wait(0.7, nextFlash)
+        }
 
-        // Event handler for the bean object
-        rectangle1.onClick(() => {
-            buttonOne = true;
-            console.log("yes.");
-            // Add logic here to change color, show text, etc.
-        });
+        // checks imput
+        function checkInput() {
+            var currentIndex = usersSequence.length - 1 // checks for last index
+            if (usersSequence[currentIndex] !== simonsSequence[currentIndex]) { // !== means not equal to
+                let message = add([
+                    text("Game over"),
+                    pos(300, 50)
+                ])
+        wait(1, () => destroy(message))
+                simonsSequence = []
+                followingSequence()
+            }
+            if (usersSequence.length === simonsSequence.length) { // opposite reaction --> if user is correct
+                followingSequence()
+            }
+            }
 
-        let buttonTwo = false;
+            // clicker patterns
+            //1
+           rectangle1.onClick(() => {
+            flash(rectangle1, 255, 0, 0)
+            usersSequence.push(0) // red
+            checkInput()
+        })
+            //2
+            rectangle2.onClick(() => {
+              flash(rectangle2, 0, 0, 225)
+                usersSequence.push(1) // blue
+                checkInput()
+            })
+                //3
+            rectangle3.onClick(() => {
+                flash(rectangle3, 0, 225, 0)
+                usersSequence.push(2) // green
+                checkInput()
+            })
+                //4
+            rectangle4.onClick(() => {
+                flash(rectangle4, 255, 225, 0)
+                usersSequence.push(3) // yellow
+                checkInput()
+            })
 
-        // Event handler for the bean object
-        rectangle2.onClick(() => {
-            buttonTwo = true;
-            console.log("no.");
-            // Add logic here to change color, show text, etc.
-        });
-
-        let buttonThree = false;
-
-        // Event handler for the bean object
-        rectangle3.onClick(() => {
-            buttonThree = true;
-            console.log("maybe.");
-            // Add logic here to change color, show text, etc.
-        });
-
-        let buttonFour = false;
-
-        // Event handler for the bean object
-        rectangle4.onClick(() => {
-            buttonFour = true;
-            console.log("don't know.");
-            // Add logic here to change color, show text, etc.
-        });
-
-        function checkAnswer() {
-    if (buttonOne === true) {
-        console.log("Correct! The bean was right.");
-        // Add code for the correct action (e.g., increase score, move to next level)
-    } else {
-        console.log("Wrong! The button was not right.");
-        // Add code for the wrong action (e.g., decrease lives, display error)
-    }
-}
-function checkAnswer() {
-    if (buttonTwo === true) {
-        console.log("Correct! The bean was right.");
-        // Add code for the correct action (e.g., increase score, move to next level)
-    } else {
-        console.log("Wrong! The button was not right.");
-        // Add code for the wrong action (e.g., decrease lives, display error)
-    }
-}
- function checkAnswer() {
-    if (buttonThree === true) {
-        console.log("Correct! The bean was right.");
-        // Add code for the correct action (e.g., increase score, move to next level)
-    } else {
-        console.log("Wrong! The button was not right.");
-        // Add code for the wrong action (e.g., decrease lives, display error)
-    }
-}
- function checkAnswer() {
-    if (buttonFour === true) {
-        console.log("Correct! The bean was right.");
-        // Add code for the correct action (e.g., increase score, move to next level)
-    } else {
-        console.log("Wrong! The button was not right.");
-        // Add code for the wrong action (e.g., decrease lives, display error)
-    }
-}
-
+        followingSequence() // to start next game
     </script>
 </body>
 </html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/kaboom/dist/kaboom.js"></script>
+</head>
+<body>
+    <script>
+        kaboom({
+            width: 800,
+            height: 600
+        })
+
+        setBackground(50, 50, 50)
+
+        // rectangles
+        const rectangle1 = add([
+            rect(400, 300),
+            pos(0, 0),
+            color(255, 0, 0),
+            area(),
+        ])
+
+        const rectangle2 = add([
+            rect(400, 300),
+            pos(400, 0),
+            color(0, 0, 225),
+            area(),
+        ])
+
+        const rectangle3 = add([
+            rect(400, 300),
+            pos(0, 300),
+            color(0, 225, 0),
+            area(),
+        ])
+
+        const rectangle4 = add([
+            rect(400, 300),
+            pos(400, 300),
+            color(255, 225, 0),
+            area(),
+        ])
+
+        // PATTERNS
+        let simonPattern = []
+        let playerPattern = []
+
+        // MAKE NEW STEP
+        function nextSequence() {
+            playerPattern = []
+
+            let randomNum = Math.floor(Math.random() * 4)
+            simonPattern.push(randomNum)
+
+            showPattern()
+        }
+
+        // FLASH FUNCTION
+        function flash(rect, r, g, b) {
+            rect.color = rgb(255, 255, 255)
+
+            wait(0.3, () => {
+                rect.color = rgb(r, g, b)
+            })
+        }
+
+        // SHOW PATTERN
+        function showPattern() {
+            let i = 0
+
+            function showNext() {
+                if (i >= simonPattern.length) {
+                    return
+                }
+
+                let num = simonPattern[i]
+
+                if (num === 0) {
+                    flash(rectangle1, 255, 0, 0)
+                }
+
+                if (num === 1) {
+                    flash(rectangle2, 0, 0, 225)
+                }
+
+                if (num === 2) {
+                    flash(rectangle3, 0, 225, 0)
+                }
+
+                if (num === 3) {
+                    flash(rectangle4, 255, 225, 0)
+                }
+
+                i++
+
+                wait(0.6, showNext)
+            }
+
+            wait(0.5, showNext)
+        }
+
+        // CHECK ANSWER
+        function checkAnswer() {
+            let currentIndex = playerPattern.length - 1
+
+            if (playerPattern[currentIndex] !== simonPattern[currentIndex]) {
+
+                let message = add([
+                    text("Game Over"),
+                    pos(300, 50)
+                ])
+
+                wait(1, () => destroy(message))
+
+                simonPattern = []
+                nextSequence()
+                return
+            }
+
+            if (playerPattern.length === simonPattern.length) {
+                nextSequence()
+            }
+        }
+
+        // CLICKS
+        rectangle1.onClick(() => {
+            flash(rectangle1, 255, 0, 0)
+            playerPattern.push(0)
+            checkAnswer()
+        })
+
+        rectangle2.onClick(() => {
+            flash(rectangle2, 0, 0, 225)
+            playerPattern.push(1)
+            checkAnswer()
+        })
+
+        rectangle3.onClick(() => {
+            flash(rectangle3, 0, 225, 0)
+            playerPattern.push(2)
+            checkAnswer()
+        })
+
+        rectangle4.onClick(() => {
+            flash(rectangle4, 255, 225, 0)
+            playerPattern.push(3)
+            checkAnswer()
+        })
+
+        // START GAME
+        nextSequence()
+
+    </script>
+</body>
+</html>
