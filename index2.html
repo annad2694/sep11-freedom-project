@@ -53,17 +53,23 @@
         }
 
         // the flash (for the sequence of the rect)
-        function flash(rect, r, g, b) { // the value of which rectangle to flash
-            rect.color = rgb(255, 255, 255)
-            wait(0.2, () => { // waits 0.2 seconds, then change back to original color
-                rect.color = rgb(r, g, b)
-            })
+        function flash(targetRect, r, g, b) { // for some reason doesnt work with just input value
+            var flashColor = rgb(255, 225, 225); // white flash
+            var originalColor = rgb(r, g, b)
+            var flashDuration = 0.25; // seconds
+
+            targetRect.color = flashColor;
+            wait(flashDuration, () => {
+                targetRect.color = rgb(r, g, b);
+            });
         }
 
         // the visual simon says/memory game pattern
             let i = 0 // becomes global
         function nextFlash() {
-            if (i >= simonsSequence.length)
+            if (i >= simonsSequence.length) {
+                return
+            }
        var num = simonsSequence[i]
             if (num == 0) flash(rectangle1, 255, 0, 0)
             else if (num == 1) flash(rectangle2, 0, 0, 225)
@@ -83,14 +89,18 @@
             var currentIndex = usersSequence.length - 1 // checks for last index
             if (usersSequence[currentIndex] !== simonsSequence[currentIndex]) { // !== means not equal to
                 let message = add([
-                    text("Game over"),
-                    pos(300, 50)
+                    text("Game over", {
+                     size: 48
+              }),
+                    pos(270, 50)
                 ])
-        wait(1, () => destroy(message))
+        wait(0.7, () => destroy(message))
                 simonsSequence = []
-                followingSequence()
+                followingSequence() // to start the next sequence
             }
-            if (usersSequence.length === simonsSequence.length) { // opposite reaction --> if user is correct
+            // opposite reaction --> if user is correct
+            if (usersSequence.length === simonsSequence.length)
+            {
                 followingSequence()
             }
             }
