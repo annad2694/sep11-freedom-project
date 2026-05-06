@@ -45,6 +45,14 @@
         // the sequences
         var simonsSequence = [] //an array for the sequence that simon says
         var usersSequence = [] // an array for the sequence the user clicks
+
+        //score
+        var score = 0;
+        let scoreLabel = add([
+            text("Score: 0"),
+            pos(24, 24), // Position on screen
+        ]);
+
         function followingSequence() {
             usersSequence = []
             var randomNum = Math.floor(Math.random() * 4) // assigns the intergerts to the colored box
@@ -94,13 +102,17 @@
               }),
                     pos(270, 50)
                 ])
-        wait(0.7, () => destroy(message))
-                simonsSequence = []
-                followingSequence() // to start the next sequence
-            }
+        wait(0.9, () => destroy(message))
+            simonsSequence = []
+            score = 0; // resets score
+            scoreLabel.text = "Score: " + score;
+            setTimeout(() => {followingSequence()}, 700)// to start the next sequence
+                    }
             // opposite reaction --> if user is correct
             if (usersSequence.length === simonsSequence.length)
             {
+                score++
+                scoreLabel.text = "Score: " + score;
                 followingSequence()
             }
             }
@@ -132,6 +144,8 @@
             })
 
         followingSequence() // to start next game
+
     </script>
 </body>
 </html>
+
