@@ -41,6 +41,7 @@
 * Make it so that when the user gets the sequence incorrect that they must redo the simulation all over again (use `scene()`) & show message when sequence is wrong.
 * Maybe add a level or score system to display current winnings.
 * If possible add sound effects to match the dictations of the game.
+* Make the losing screen last longer and the flash come a little later so the user isn't rushed. (told to by peers)
 
 
 
