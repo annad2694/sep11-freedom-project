@@ -1,16 +1,17 @@
 # Presentation Plan
 
 ## Hook
-* 
+* An imagine scenario:
+"Do you guys remember any games you used to play in your childhood... some famous ones were probably simon says and like simple memory games. Now imagine if you were to combine that and make it at a challanging level where its no longer intended for children but intended for you to beat as teenagers." 
 
 ## Product
-* 
+* I will show off what I made by providing screenshots of my conditionals, functions, etc.. and put a gif of my program working.
 
 ## Process
-* 
+* I will show the behind the scenes process by showing a video that I referenced too and how I uitilized the Kaboom website by comparing it to my code to show where I got my foundations of my code from. 
 
 ## Conclusion
-* 
+* I will apply 2 takeaways I had from the experience from making this game, especially about the process. I'm not sure of the takeaways right at this moment, however I will decide them when I come to it. 
 
 <!-- EXAMPLE
 
