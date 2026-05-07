@@ -6,6 +6,8 @@
 
 ## Product
 * I will show off what I made by providing screenshots of my conditionals, functions, etc.. and put a gif of my program working.
+* If I cannot make a gif I will put a link to my preview and play the game and then connect things that happen in the game and then show it in the ss of the next process thingy
+* 
 
 ## Process
 * I will show the behind the scenes process by showing a video that I referenced too and how I uitilized the Kaboom website by comparing it to my code to show where I got my foundations of my code from. 
