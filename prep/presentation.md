@@ -6,14 +6,21 @@
 
 ## Product
 * I will show off what I made by providing screenshots of my conditionals, functions, etc.. and put a gif of my program working.
-* If I cannot make a gif I will put a link to my preview and play the game and then connect things that happen in the game and then show it in the ss of the next process thingy
-* 
+* If I cannot make a gif I will put a link to my preview and play the game and then connect things that happen in the game and then show challanges I had in the next slide. 
 
 ## Process
-* I will show the behind the scenes process by showing a video that I referenced too and how I uitilized the Kaboom website by comparing it to my code to show where I got my foundations of my code from. 
+* I will show the behind the scenes process by showing a video that I referenced too and how I uitilized the Kaboom website by comparing it to my code to show where I got my foundations of my code from. (Maybe will include challanges in my work.)
+  * Plan layout
+  * MVP: simpliest game layout
+  * Beyond MVP:(talk about what I added to make my game better & how I did so by adding snippets of code). 
+* Code snippets of:
+  * MVP
+  * Kaboom
+  * Javascript
 
 ## Conclusion
-* I will apply 2 takeaways I had from the experience from making this game, especially about the process. I'm not sure of the takeaways right at this moment, however I will decide them when I come to it. 
+* I will apply 2 takeaways I had from the experience from making this game, especially about the process. I'm not sure of the takeaways right at this moment, however I will decide them when I come to it.
+* And finally will add a "Thank you for listening slide."
 
 <!-- EXAMPLE
 
